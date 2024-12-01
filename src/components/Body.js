@@ -1829,85 +1829,20 @@ const Body = () => {
   //   setfiltrest(jsondata);
   //   setrestData(jsondata);
   // };
-  return (
-    restData  ? (<div className="body-elem">
-      {/* {console.log("body rendering")};{console.log(filtrest)} */}
+  
+    if (restData === null)
+    {
 
-      {console.log(restData)}
-      
-      <div className="filter">
-        <button
-          onClick={() => {
-            const filteredrest = restData.filter(
-              (filrest) => filrest?.info?.avgRating > 4.3
-            );
-
-            setfiltrest(filteredrest);
-          }}
-          className="top-rated"
-        >
-          Top rated restaurant
-        </button>
-
-        <input
-          type="text"
-          className="search-bar"
-          //value={searchvalue}
-          onChange={(e) => {
-            setsearchvalue(e.target.value);
-            const filtersearch = restData.filter((filterrest) => {
-              return filterrest?.info?.name
-                .toLowerCase()
-                .includes(searchvalue.toLowerCase()); // show restaursnts on the basis of the letters
-            });
-            setfiltrest(filtersearch);
-          }}
-        />
-        <button
-          onClick={() => {
-            const filtersearch = restData.filter((filterrest) => {
-              return filterrest?.info?.name
-                .toLowerCase()
-                .includes(searchvalue.toLowerCase()); // converting name into lower case and then
-              // checking for lower case includes
-            });
-
-            setfiltrest(filtersearch);
-          }}
-        >
-          Search
-        </button>
-      </div>
-      <div className="res-card-cont">
-        {restData?.map((restaurant) => (
-          <Link
-            to={"/restaurants/" + restaurant?.info?.id}
-            
-          >
-            <CardComponent name={restaurant} key={restaurant?.info?.id} />
-          </Link>
-          //this link's id will be sent to the url and on the routing on it will see /restauants:resid and the component based on the path
-          // will rendered and the param will have the id which will be sent to the api for fetching
-        ))}
-      </div>
-    </div>
-  ) : ( <>
-
-      {console.log(restData)}
-        <ShimmerUI />
-      </>)
- )
-  if (!restData) {
-    return (
-      <>
+      return(
+        <>
 
       {console.log(restData)}
         <ShimmerUI />
       </>
-    );
-
+      )
+    } 
     
-  } else {
+       else {
 
 
 
