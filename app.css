@@ -1,0 +1,67 @@
+.logo{
+    height: 90px;
+}
+.head{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-items>ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 10px 10px;
+}
+.card-img{
+
+    width: 150px;
+    height: 140px;
+}
+.res-card-cont{
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.shim-Cont{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.shim-box{
+
+border: 1px solid aqua;
+background-color: gray;
+    width: 100px;
+    height: 150px;
+}
+
+.cards{
+    margin: 10px;
+    width:200px;
+    height: 330px;
+    background-color:aliceblue;
+    text-align: center;
+
+    
+}
+.cards:hover{
+
+    border: 1px solid blue;
+    box-shadow: 2px 5px;
+
+}
+.body-elem{
+
+    margin: 20px;
+}
+
+.top-rated{
+
+    margin-right: 10px;
+}
