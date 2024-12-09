@@ -18,7 +18,6 @@ import { Provider } from "react-redux";
 import appStore from "./src/util/appStore";
 import Cart from "./src/components/Cart";
 
-
 function Applayout() {
   const [userName, setUserName] = useState("")
 // wrapping the whole app layout in UserCOntext so that whenever the value changes it gets uptated to all the component it is wrapping in
