@@ -6,21 +6,36 @@ import Header from "./src/components/Header";
 import ContactUs from "./src/components/ContactUs";
 import Error from "./src/components/Error";
 
-import Menu from "./src/components/Menu";
+import Menu from "./src/components/MenuCategory";
 
 import RestaurantMenu from "./src/components/RestaurantMenu";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./src/components/About";
 
+import UserContext from "./src/util/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./src/util/appStore";
+import Cart from "./src/components/Cart";
+
 
 function Applayout() {
-
+  const [userName, setUserName] = useState("")
+// wrapping the whole app layout in UserCOntext so that whenever the value changes it gets uptated to all the component it is wrapping in
   return (
+
+    <Provider store={appStore}>   {/**connected the redux store to the react application */} 
+
+    <UserContext.Provider value={{LoggedInUser:userName, setUserName}}>
+      {/** we can have nested Provider also and the ones that get nestes provided will get hte value specified on that value */} 
     <div className="App-body">
      <Header />
      <Outlet />
     </div>
+
+     </UserContext.Provider >
+
+     </Provider>
   );
 }
  
@@ -55,7 +70,7 @@ const appRouter2 = createBrowserRouter([
     errorElement: <Error />      ,                                 //parent and below all are child
     children: [{ 
       
-      path: "/body",
+      path: "/Body",
       element: <Body />
     },
     {
@@ -76,7 +91,12 @@ element:<Menu />
 
     path:"/contact",
     element:<ContactUs />
-  }],
+  },
+{
+
+  path: "/cart",
+  element:<Cart />
+}],
 
 
     
