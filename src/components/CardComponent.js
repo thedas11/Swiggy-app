@@ -12,7 +12,7 @@ const CardComponent = (props) => {
     return (
       <div className="m-4  w-[250px] h-[450px] bg-slate-100  hover:bg-slate-400 ">
 
-          {/** {name?.info?.isOpen? (<div> Open </div>) : null} alternate of HOC   */ }
+          
         
         <img
           className="card-img rounded-lg px-1 py-1  "

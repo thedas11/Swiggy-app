@@ -12,7 +12,7 @@ const MenuCategory = (props) => {
 
     setShowcat(!showcat)
 
-    // ShowItemsfunc();
+    
 
   }
   return (

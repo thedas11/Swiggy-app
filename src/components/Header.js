@@ -43,7 +43,7 @@ const Header = () => {
   
         <div className="flex items-center">
           <ul className="flex p-4 m-4 gap-4 ">
-            <Link to ="/Body"><li>Home</li></Link>  {/** link is used so that when we click the whole page doesn't refresh just the page comes.  */} 
+            <Link to ="/Body"><li>Home</li></Link>  
             <Link to="/about"><li>AboutUS</li></Link>
             <Link to="/contact"><li>ContactUs</li></Link>
            <Link to="/cart"> <li className="text-lg" >Cart({cartItems.length})items</li> </Link>

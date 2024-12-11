@@ -1,21 +1,21 @@
 const ShimmerUI = ()=>{
 
     return(
-        <div className="shim-Cont">
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
-        <div className="shim-box"></div>
+        <div className="border border-black">
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
+        <div className="border border-black"></div>
             </div>
         
         )}
