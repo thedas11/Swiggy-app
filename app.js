@@ -20,13 +20,13 @@ import Cart from "./src/components/Cart";
 
 function Applayout() {
   const [userName, setUserName] = useState("")
-// wrapping the whole app layout in UserCOntext so that whenever the value changes it gets uptated to all the component it is wrapping in
+
   return (
 
-    <Provider store={appStore}>   {/**connected the redux store to the react application */} 
+    <Provider store={appStore}>   
 
     <UserContext.Provider value={{LoggedInUser:userName, setUserName}}>
-      {/** we can have nested Provider also and the ones that get nestes provided will get hte value specified on that value */} 
+  
     <div className="App-body">
      <Header />
      <Outlet />
@@ -38,35 +38,13 @@ function Applayout() {
   );
 }
  
-// for routing to different pages we use: this will take us to the corresponding pages
 
-// const appRouter1 = ([{
-
-//   path:"/",
-//   element: <Applayout />
-
-// },
-// {
-//   path: "/about",
-//   element: <About />
-
-// },
-
-// {
-//   path: "/contact",
-//   element: <ContactUs />
-// }])
-
-// this will act as a single page application when we want to show the different 
-//pages to a single page by keeping something intact i.e. in the Applayout itself(Header intact).
-
-//this is child routing
 const appRouter2 = createBrowserRouter([
   {
 
     path: "/",
     element : <Applayout />, 
-    errorElement: <Error />      ,                                 //parent and below all are child
+    errorElement: <Error />      ,                                 
     children: [{ 
       
       path: "/Body",
