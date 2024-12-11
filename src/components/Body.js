@@ -50,7 +50,7 @@ const Body = () => {
     return (
 
       <div className="body-elem bg-green-50">
-        {/* {console.log("body rendering")};{console.log(filtrest)} */}
+        
 
         {console.log(restData)}
       
@@ -112,8 +112,7 @@ const Body = () => {
   
               <CardComponent name={restaurant} key={restaurant?.info?.id} id="restaurant?.info?.id" />
             </Link>
-            //this link's id will be sent to the url and on the routing on it will see /restauants:resid and the component based on the path
-            // will rendered and the param will have the id which will be sent to the api for fetching
+            
           ))}
         </div>
       </div>
